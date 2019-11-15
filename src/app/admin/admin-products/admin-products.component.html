@@ -20,7 +20,7 @@
 <br>
 
 
-<input type="text" [(ngModel)]="searchName" name="searchName">
+<input type="text">
 <table class="table">
   <thead>
     <tr>
@@ -35,7 +35,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let prod of adminProducts | search:searchName; let i=index">
+    <tr *ngFor="let prod of adminProducts; let i=index">
       <th scope="row">{{i+1}}</th>
       <td>{{prod.category}}</td>
       <td>{{prod.name}}</td>
